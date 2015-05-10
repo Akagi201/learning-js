@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>:contains(text)过滤选择器</title>
+        <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <div>改变包含"jQuery"字符内容的背景色：</div>
+        <ol>
+            <li>强大的"jQuery"</li>
+            <li>"javascript"也很实用</li>
+            <li>"jQuery"前端必学</li>
+            <li>"java"是一种开发语言</li>
+            <li>前端利器——"jQuery"</li>
+        </ol>
+
+        <script type="text/javascript">
+            $("li:contains('jQuery')").css("background", "green");
+        </script>
+    </body>
+</html>

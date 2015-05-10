@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>:eq(index)过滤选择器</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <div>改变中间行"葡萄"背景颜色：</div>
+        <ol>
+        <li>橘子</li>
+        <li>香蕉</li>
+        <li>葡萄</li>
+        <li>苹果</li>
+        <li>西瓜</li>
+        </ol>
+
+        <script type="text/javascript">
+            $("li:eq(2)").css("background-color", "#60F");
+        </script>
+    </body>
+</html>

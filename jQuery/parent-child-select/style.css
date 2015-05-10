@@ -1,0 +1,12 @@
+div, p, label
+{
+    float: left;
+    border: solid 1px #ccc;
+    margin: 5px;
+    padding: 5px;
+}
+label
+{
+    width: 30px;
+    height:30px
+}

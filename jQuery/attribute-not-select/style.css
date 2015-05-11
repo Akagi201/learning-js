@@ -1,0 +1,13 @@
+ul
+{
+    float: left;
+    width: 180px;
+}
+ul li
+{
+    float: left;
+    width: 180px;
+    height: 23px;
+    line-height: 23px;
+    margin: 2px 0px;
+}

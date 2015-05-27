@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <title>iScroll demo: carousel</title>
+
+    <script type="text/javascript" src="../bower_components/iscroll/build/iscroll.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload="loaded()">
+
+<div id="viewport">
+    <div id="wrapper">
+        <div id="scroller">
+            <div class="slide">
+                <div class="painting giotto"></div>
+            </div>
+            <div class="slide">
+                <div class="painting leonardo"></div>
+            </div>
+            <div class="slide">
+                <div class="painting gaugin"></div>
+            </div>
+            <div class="slide">
+                <div class="painting warhol"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="indicator">
+    <div id="dotty"></div>
+</div>
+
+<div id="prev">
+    <a href="javascript:myScroll.scrollToElement(document.querySelector('#scroller div:nth-child(1)'))">Scroll to element 2</a>
+</div>
+
+<div id="next">
+    next
+</div>
+
+</body>
+</html>

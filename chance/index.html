@@ -1,0 +1,9 @@
+<script src="http://chancejs.com/chance.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+    // One line!
+    var uniques = chance.unique(chance.natural, 200, {min: 10000, max: 99999});
+
+    // Print it out to the document for this snippet so we can see it in action
+    document.write(JSON.stringify(uniques));
+</script>

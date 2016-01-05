@@ -1,0 +1,26 @@
+{
+  "name": "akhello",
+  "version": "0.1.0",
+  "description": "hello world",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akagi201/akhellojs.git"
+  },
+  "keywords": [
+    "akhello"
+  ],
+  "author": "Akagi201",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akagi201/akhellojs/issues"
+  },
+  "homepage": "https://github.com/akagi201/akhellojs#readme",
+  "dependencies": {
+    "backbone": "^1.2.3"
+  },
+  "devDependencies": {}
+}

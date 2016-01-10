@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <!--<link rel="stylesheet" href="bower_components/codemirror/lib/codemirror.css">-->
+    <!--<script src="bower_components/codemirror/lib/codemirror.js"></script>-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.min.js"></script>
+</head>
+
+<body>
+
+<textarea id="code" name="code">Hello</textarea>
+
+<script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {  // 标识到textarea
+        // ref: https://codemirror.net/doc/manual.html#config
+        value: "Hello World",  // 文本域默认显示的文本
+        mode: "text/html",  // 模式
+        theme : "twilight",  // CSS样式选择
+        indentUnit: 2,  // 缩进单位，默认2
+        smartIndent: true,  // 是否智能缩进
+        tabSize: 4,  // Tab缩进，默认4
+        readOnly: false,  // 是否只读，默认false
+        showCursorWhenSelecting: true,
+        lineNumbers: true  // 是否显示行号
+    });
+</script>
+
+</body>
+
+</html>

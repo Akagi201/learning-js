@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      测试页
+    </title>
+    <meta charset="utf-8">
+    <script src="http://www.hubwiz.com/scripts/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-app="" ng-init="friends = [
+   {name:'Tom', age:25},
+   {name:'Jerry', age:28},
+   {name:'Tom', age:25},
+   {name:'Jerry', age:28}]">
+
+      <table>
+        <tr ng-repeat="x in friends">
+          <td>
+            {{ 'Name：'+ x.name +' ，Age：'+ x.age}}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      测试页
+    </title>
+    <meta charset="utf-8">
+    <script src="http://www.hubwiz.com/scripts/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-app="" ng-controller="MyController">
+
+      请输入一个名字：<input type="text" ng-model="person.name">
+
+      Hello
+      <span ng-bind="person.name"></span>
+
+    </div>
+
+    <script>
+      function MyController($scope) {
+        $scope.person = {
+          name: "World"
+        };
+      }
+    </script>
+  </body>
+</html>

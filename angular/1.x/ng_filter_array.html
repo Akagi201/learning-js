@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      测试页
+    </title>
+    <meta charset="utf-8">
+    <script src="http://www.hubwiz.com/scripts/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-app="" ng-init="friends = [
+   {name:'tom', age:16},
+   {name:'jerry', age:20},
+   {name:'garfield', age:22}]">
+
+      输入过滤:<input type="text" ng-model="name">
+      <ul style="list-style-type:none">
+        <li>
+          姓名，年龄</li>
+        <li ng-repeat="x in friends | filter:name">
+          {{ x.name + ' , ' + x.age }}
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

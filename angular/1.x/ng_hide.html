@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      测试页
+    </title>
+    <meta charset="utf-8">
+    <script src="http://www.hubwiz.com/scripts/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-app="" ng-init="click=false">
+      <button ng-click="click= !click">我变</button>
+      <p ng-hide="click">显示了。</p>
+      <p ng-hide="!click">隐藏了。</p>
+    </div>
+  </body>
+</html>

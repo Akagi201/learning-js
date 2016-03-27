@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <script src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular.min.js"></script>
+    <script src="data.js"></script>
+    <link rel="stylesheet" href="data.css">
+  </head>
+  <!-- ng-app指令在body这个DOM对象上建立了$rootScope对象 -->
+  <body ng-app="ezstuff" ng-init="sb = {name:'somebody',gender:'male',age:28}">
+    <!-- 注意我们传入的变量名没加命名空间-->
+    <ez-namecard data="sb"></ez-namecard>
+  </body>
+</html>

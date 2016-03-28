@@ -1,0 +1,15 @@
+.ez-dialog {
+  border: 1px solid #787878;
+  border-radius: 5px;
+  background: #c0c0c0;
+  width: 300px;
+  min-height: 200px;
+}
+.ez-dialog .header {
+  background: #0000ff;
+  color: #fff;
+  padding: 5px;
+}
+.ez-dialog .content {
+  padding: 10px;
+}

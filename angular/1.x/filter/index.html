@@ -1,0 +1,12 @@
+<html ng-app="ezstuff">
+  <head>
+    <script src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular.min.js"></script>
+    <script src="filter.js"></script>
+  </head>
+  <body>
+    <div ng-controller="ezCtrl">
+      Total salary is
+      {{total|number:2|currency}}
+    </div>
+  </body>
+</html>

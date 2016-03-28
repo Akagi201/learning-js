@@ -1,0 +1,15 @@
+<html ng-app="ezstuff">
+  <head>
+    <script src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular.min.js"></script>
+    <script src="link.js"></script>
+  </head>
+  <body>
+    <div ng-controller="ezCtrl">
+      Date format:
+      <input ng-model="format">
+      <hr/>
+      Current time is:
+      <span ez-current-time="format"></span>
+    </div>
+  </body>
+</html>

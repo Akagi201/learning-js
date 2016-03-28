@@ -1,0 +1,18 @@
+<html ng-app="ezstuff">
+  <head>
+    <script src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular.min.js"></script>
+    <script src="transclude.js"></script>
+    <link rel="stylesheet" href="transclude.css">
+  </head>
+  <body>
+    <div ng-controller="ezCtrl">
+      <ez-dialog>
+        <p>Check out the contents,
+          {{name}}!</p>
+        <p>
+          <button>Ok,I will</button>
+        </p>
+      </ez-dialog>
+    </div>
+  </body>
+</html>

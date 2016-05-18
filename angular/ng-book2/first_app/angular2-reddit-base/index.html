@@ -1,8 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Angular 2 - Simple Reddit</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular 2 - Simple Reddit</title>
+    <!-- Libraries -->
+    <script src="node_modules/es6-shim/es6-shim.js" charset="utf-8"></script>
+    <script src="node_modules/zone.js/dist/zone.js" charset="utf-8"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js" charset="utf-8"></script>
+    <script src="node_modules/systemjs/dist/system.src.js" charset="utf-8"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="resources/vendor/semantic.min.css" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css" charset="utf-8">
+  </head>
+  <body>
+    <script src="resources/systemjs.config.js" charset="utf-8"></script>
+    <script>
+      System.import('app.js').then(null, console.error.bind(console));
+    </script>
+
+    <hello-world></hello-world>
+
+  </body>
 </html>

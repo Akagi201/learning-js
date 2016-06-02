@@ -1,0 +1,34 @@
+<html>
+<head>
+
+</head>
+
+<body>
+	<script>
+
+		let colors = ['red', 'blue', 'green', 'yellow'];
+		let createTimebar = (segs) => {
+			let div = document.createElement('div');
+			let h = 8;
+			div.className = 'line';
+			div.style.height = h+'px';
+			div.style.display = 'flex';
+			div.style.marginBottom = '3px';
+			segs.forEach(seg => {
+				let span = document.createElement('div');
+				span.style.backgroundColor = colors[seg.color];
+				span.style.width = seg.w*20+'px';
+				span.style.height = h+'px';
+				div.appendChild(span);
+			});
+			document.body.appendChild(div);
+		};
+
+		createTimebar([{color:0, w:10}, {color:1, w:20}, {color:2, w:10}]);
+		createTimebar([{color:0, w:2}, {color:1, w:5}, {color:2, w:6}]);
+		createTimebar([{color:0, w:4}, {color:1, w:2}, {color:2, w:6}]);
+
+	</script>
+</body>
+
+</html>

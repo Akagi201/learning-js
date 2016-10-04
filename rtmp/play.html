@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="refresh" content="60">
+    </head>
+    <body>
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/srs.page.js"></script>
+        <script type="text/javascript" src="js/srs.log.js"></script>
+        <script type="text/javascript" src="js/srs.player.js"></script>
+        <script type="text/javascript" src="js/srs.publisher.js"></script>
+        <script type="text/javascript" src="js/srs.utility.js"></script>
+        <script type="text/javascript" src="js/winlin.utility.js"></script>
+        <script type="text/javascript">
+            (function($){
+                $.getUrlParam = function(name)
+                {
+                    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                    var r = window.location.search.substr(1).match(reg);
+                    if (r!=null) return unescape(r[2]); return null;
+                }
+            })(jQuery);
+
+            function isNull(data){
+                return (data == "" || data == undefined || data == null) ? true : false;
+            };
+            $(function(){
+                    var test_ip = "10.0.5.135";
+                    var online_ip = "183.134.101.194";
+
+                    var ip = online_ip;
+                    var url = "uplive.b0.upaiyun.com/live/loading";
+                    var xx = $.getUrlParam("stream");
+                    var mode = $.getUrlParam("mode");
+                    if (!isNull(xx))
+                    {
+                      url = xx;
+                    }
+
+                    if (!isNull(mode) && mode == "0")
+                    {
+                        ip = test_ip;
+                    }
+
+                    var srs_play_url = "rtmp://"+ ip +
+                        "/" + url;
+                    var hls_play_url = "http://" + ip +
+                        ":8080/" + url + ".m3u8";
+                    var flv_play_url = "http://" + ip +
+                        "/" + url + ".flv";
+
+                    $("#srs_addr").text(srs_play_url);
+                    $("#hls_addr").text(hls_play_url);
+                    $("#flv_addr").text(flv_play_url);
+
+                    p = new SrsPlayer("srs_player", srs_get_player_width(), srs_get_player_height());
+                    p.set_srs_player_url("http://www.ossrs.net/players/srs_player/release/srs_player.swf?_version="+srs_get_version_code());
+                    p.on_player_ready = function() {
+                      this.play(srs_play_url);
+                    };
+
+                    p.on_player_metadata = function(metadata){
+                      console.log(metadata);
+                      //console.log(p.dump_log());
+                    };
+                    p.start();
+
+                    p1 = new SrsPlayer("srs_player1", srs_get_player_width(), srs_get_player_height());
+                    p1.set_srs_player_url("http://www.ossrs.net/players/srs_player/release/srs_player.swf?_version="+srs_get_version_code());
+                    p1.on_player_ready = function() {
+                      this.play(hls_play_url);
+                    };
+
+                    p1.on_player_metadata = function(metadata){
+                      console.log(metadata);
+                      //console.log(p1.dump_log());
+                    };
+                    p1.start();
+
+
+                    p2 = new SrsPlayer("srs_player2", srs_get_player_width(), srs_get_player_height());
+                    p2.set_srs_player_url("http://www.ossrs.net/players/srs_player/release/srs_player.swf?_version="+srs_get_version_code());
+                    p2.on_player_ready = function() {
+                      this.play(flv_play_url);
+                    };
+
+                    p2.on_player_metadata = function(metadata){
+                      console.log(metadata);
+                      //console.log(p2.dump_log());
+                    };
+                    p2.start();
+            })
+        </script>
+        <div class="player_header">
+            <h1 id="srs_title">Rtmp Player: </h1>
+            <h2 id="srs_addr"></h2>
+        </div>
+        <div id="srs_player"></div>
+
+        <div class="player_header">
+            <h1 id="hls_title">Hls Play: </h1>
+            <h2 id="hls_addr"></h2>
+        </div>
+        <div id="srs_player1"></div>
+
+        <div class="player_header">
+            <h1 id="flv_title">Flv Play: </h1>
+            <h2 id="flv_addr"></h2>
+        </div>
+        <div id="srs_player2"></div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "simple",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "akagi201@gmail.com (http://akagi201.org/)",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "gulp-param": "^1.0.3",
+    "gulp-rename": "^1.2.2"
+  }
+}

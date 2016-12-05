@@ -1,0 +1,17 @@
+{
+  "name": "echotest",
+  "version": "0.1.0",
+  "description": "echo test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "janus"
+  ],
+  "author": "akagi201@gmail.com (http://akagi201.org/)",
+  "license": "MIT",
+  "dependencies": {
+    "janus-gateway-js": "^0.8.1"
+  }
+}
